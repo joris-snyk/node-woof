@@ -13,7 +13,9 @@
     "start": "node lib/index.js",
     "startWithAgent": "node lib/index.js",
     "startWithoutAgent": "node lib/index.js --without-agent",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "snyk.io",
   "license": "MIT OR Apache-2.0",
@@ -24,9 +26,11 @@
     "@snyk/nodejs-runtime-agent": "^1.42.1",
     "debug": "^4.1.1",
     "st": "^0.1.0",
-    "uuid-validate": "0.0.3"
+    "uuid-validate": "0.0.3",
+    "snyk": "^1.189.0"
   },
   "publishConfig": {
     "access": "restricted"
-  }
+  },
+  "snyk": true
 }
